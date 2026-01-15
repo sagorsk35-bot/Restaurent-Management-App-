@@ -5,13 +5,13 @@ import Link from 'next/link'
 import {
   Store,
   Users,
-  Truck,
   ShoppingBag,
   ArrowRight,
   Star,
-  MapPin,
   Clock,
-  Sparkles,
+  MessageCircle,
+  UtensilsCrossed,
+  BarChart3,
 } from 'lucide-react'
 import { GlassCard, Button } from '@/components/ui'
 
@@ -22,19 +22,19 @@ const features = [
     description: 'Full control over your menu, orders, and analytics',
   },
   {
-    icon: Truck,
-    title: 'Real-time Tracking',
-    description: 'Live GPS tracking for all deliveries',
+    icon: MessageCircle,
+    title: 'Smart Chatbot',
+    description: 'Train your bot with custom FAQs and policies',
   },
   {
-    icon: Sparkles,
-    title: 'AI-Powered Support',
-    description: 'Custom trained chatbot for each restaurant',
+    icon: BarChart3,
+    title: 'Analytics Dashboard',
+    description: 'Track orders, revenue, and performance',
   },
   {
     icon: ShoppingBag,
-    title: 'Price Comparison',
-    description: 'Smart comparison to find the best deals',
+    title: 'Easy Ordering',
+    description: 'Seamless ordering experience for customers',
   },
 ]
 
@@ -67,23 +67,22 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/20 mb-6"
             >
-              <Sparkles className="h-4 w-4 text-primary-400" />
+              <UtensilsCrossed className="h-4 w-4 text-primary-400" />
               <span className="text-sm text-primary-400">
-                AI-Powered Food Delivery Platform
+                Restaurant Management Platform
               </span>
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Delicious Food,{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
-                Delivered Fast
+                Managed Simply
               </span>
             </h1>
 
             <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
-              The ultimate platform for restaurants, customers, and delivery
-              partners. Real-time tracking, smart price comparison, and
-              AI-powered assistance.
+              The ultimate platform for restaurants and customers. Manage your menu,
+              train your chatbot, and grow your business.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -132,7 +131,7 @@ export default function HomePage() {
             Why Choose FoodFlow?
           </h2>
           <p className="text-white/60 max-w-xl mx-auto">
-            A complete ecosystem designed for modern food delivery
+            A complete ecosystem designed for modern restaurants
           </p>
         </motion.div>
 
@@ -161,7 +160,7 @@ export default function HomePage() {
 
       {/* Role Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Customer */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -173,16 +172,16 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-white mb-2">For Customers</h3>
               <ul className="space-y-2 text-white/60 text-sm mb-6">
                 <li className="flex items-center gap-2">
-                  <Star className="h-4 w-4 text-warning" />
-                  Compare prices across restaurants
+                  <ShoppingBag className="h-4 w-4 text-primary-400" />
+                  Browse menus easily
                 </li>
                 <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-info" />
-                  Real-time order tracking
+                  <Clock className="h-4 w-4 text-info" />
+                  Quick ordering process
                 </li>
                 <li className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-primary-400" />
-                  AI assistant for recommendations
+                  <MessageCircle className="h-4 w-4 text-success" />
+                  Chat with restaurant bot
                 </li>
               </ul>
               <Link href="/restaurants">
@@ -193,8 +192,8 @@ export default function HomePage() {
 
           {/* Restaurant */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
@@ -210,8 +209,8 @@ export default function HomePage() {
                   Manage orders in real-time
                 </li>
                 <li className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 text-primary-400" />
-                  Train your own AI chatbot
+                  <MessageCircle className="h-4 w-4 text-primary-400" />
+                  Train your own chatbot
                 </li>
                 <li className="flex items-center gap-2">
                   <Star className="h-4 w-4 text-warning" />
@@ -220,36 +219,6 @@ export default function HomePage() {
               </ul>
               <Link href="/admin">
                 <Button variant="accent" className="w-full">Partner Now</Button>
-              </Link>
-            </GlassCard>
-          </motion.div>
-
-          {/* Delivery */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <GlassCard className="h-full p-8 border-success/30">
-              <Truck className="h-10 w-10 text-success mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">For Riders</h3>
-              <ul className="space-y-2 text-white/60 text-sm mb-6">
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-info" />
-                  Optimized route planning
-                </li>
-                <li className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-success" />
-                  Flexible schedule
-                </li>
-                <li className="flex items-center gap-2">
-                  <Star className="h-4 w-4 text-warning" />
-                  Track your earnings
-                </li>
-              </ul>
-              <Link href="/delivery">
-                <Button variant="success" className="w-full">Become a Rider</Button>
               </Link>
             </GlassCard>
           </motion.div>
@@ -272,12 +241,6 @@ export default function HomePage() {
             <div className="flex items-center gap-4">
               <Link href="/superadmin" className="text-sm text-white/40 hover:text-white">
                 Admin
-              </Link>
-              <Link href="/privacy" className="text-sm text-white/40 hover:text-white">
-                Privacy
-              </Link>
-              <Link href="/terms" className="text-sm text-white/40 hover:text-white">
-                Terms
               </Link>
             </div>
           </div>
