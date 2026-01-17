@@ -80,7 +80,7 @@ export default function AdminLayout({
   const { user } = useAuthStore()
 
   return (
-    <div className="flex h-screen overflow-hidden bg-surface">
+    <div className="flex h-screen overflow-hidden bg-gray-950">
       {/* Mobile sidebar backdrop */}
       <AnimatePresence>
         {sidebarOpen && (
@@ -98,7 +98,7 @@ export default function AdminLayout({
       <motion.aside
         className={cn(
           'fixed inset-y-0 left-0 z-50 flex w-64 flex-col',
-          'bg-surface-elevated/95 backdrop-blur-xl border-r border-white/10',
+          'bg-gray-900/95 backdrop-blur-xl border-r border-white/10',
           'lg:relative lg:translate-x-0',
           !sidebarOpen && '-translate-x-full lg:w-20'
         )}
@@ -240,7 +240,7 @@ export default function AdminLayout({
       {/* Main content */}
       <div className="flex flex-1 flex-col overflow-hidden">
         {/* Top header */}
-        <header className="flex h-16 items-center justify-between gap-4 border-b border-white/10 bg-surface-elevated/50 backdrop-blur-lg px-4 lg:px-6">
+        <header className="flex h-16 items-center justify-between gap-4 border-b border-white/10 bg-gray-900/50 backdrop-blur-lg px-4 lg:px-6">
           {/* Mobile menu button */}
           <Button
             variant="ghost"

@@ -38,7 +38,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
 
     const variantStyles = {
       default:
-        'bg-surface-elevated border-white/10 focus:border-primary-500 focus:ring-primary-500/20',
+        'bg-gray-900 border-white/10 focus:border-primary-500 focus:ring-primary-500/20',
       glass:
         'bg-white/5 backdrop-blur-xl border-white/10 focus:border-white/30 focus:ring-white/10',
     }
@@ -79,7 +79,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
                 key={option.value}
                 value={option.value}
                 disabled={option.disabled}
-                className="bg-surface-elevated text-white"
+                className="bg-gray-900 text-white"
               >
                 {option.label}
               </option>

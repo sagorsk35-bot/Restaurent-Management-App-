@@ -122,7 +122,7 @@ export function OrderProgress({ currentStatus, className }: OrderProgressProps) 
                     'relative z-10 flex h-8 w-8 items-center justify-center rounded-full text-sm',
                     isCompleted
                       ? 'bg-primary-500 text-white'
-                      : 'bg-surface-elevated text-white/40 ring-2 ring-white/10'
+                      : 'bg-gray-900 text-white/40 ring-2 ring-white/10'
                   )}
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{

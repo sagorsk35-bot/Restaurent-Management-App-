@@ -52,7 +52,7 @@ export function Modal({
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <motion.div
               className={cn(
-                'relative w-full rounded-2xl bg-surface-elevated/95 backdrop-blur-xl',
+                'relative w-full rounded-2xl bg-gray-900/95 backdrop-blur-xl',
                 'border border-white/10 shadow-2xl',
                 sizeStyles[size],
                 className
