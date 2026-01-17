@@ -218,7 +218,7 @@ export default function HomePage() {
                 </li>
               </ul>
               <Link href="/admin">
-                <Button variant="accent" className="w-full">Partner Now</Button>
+                <Button variant="default" className="w-full">Partner Now</Button>
               </Link>
             </GlassCard>
           </motion.div>
