@@ -227,7 +227,7 @@ export default function SuperadminDashboard() {
             </div>
 
             {/* Mini Map Placeholder */}
-            <div className="h-48 rounded-xl bg-surface-overlay mb-4 flex items-center justify-center border border-white/10">
+            <div className="h-48 rounded-xl bg-gray-800 mb-4 flex items-center justify-center border border-white/10">
               <div className="text-center">
                 <MapPin className="h-8 w-8 text-primary-500 mx-auto mb-2" />
                 <p className="text-sm text-white/60">Live tracking map</p>
@@ -340,7 +340,7 @@ export default function SuperadminDashboard() {
             </div>
 
             {/* Revenue Chart Placeholder */}
-            <div className="h-64 rounded-xl bg-surface-overlay flex items-center justify-center border border-white/10">
+            <div className="h-64 rounded-xl bg-gray-800 flex items-center justify-center border border-white/10">
               <div className="text-center">
                 <TrendingUp className="h-8 w-8 text-success mx-auto mb-2" />
                 <p className="text-sm text-white/60">Revenue Heatmap</p>

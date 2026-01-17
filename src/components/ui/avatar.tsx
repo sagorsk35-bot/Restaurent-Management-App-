@@ -113,7 +113,7 @@ export function AvatarGroup({
       {remainingCount > 0 && (
         <div
           className={cn(
-            'relative flex items-center justify-center rounded-full bg-surface-overlay ring-2 ring-white/10',
+            'relative flex items-center justify-center rounded-full bg-gray-800 ring-2 ring-white/10',
             sizeStyles[size]
           )}
         >

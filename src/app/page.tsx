@@ -47,7 +47,7 @@ const stats = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-950">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         {/* Gradient Orbs */}

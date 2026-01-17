@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   html {
     @apply scroll-smooth;
   }
 
   body {
-    @apply bg-surface min-h-screen;
+    @apply bg-gray-950 text-white min-h-screen antialiased;
   }
 
   /* Custom scrollbar */
@@ -35,7 +31,7 @@
 
   /* Selection */
   ::selection {
-    @apply bg-primary-500/30 text-white;
+    @apply bg-orange-500/30 text-white;
   }
 }
 
@@ -51,58 +47,7 @@
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-pink-500 bg-clip-text text-transparent;
-  }
-
-  /* Animated gradient border */
-  .gradient-border {
-    @apply relative;
-  }
-
-  .gradient-border::before {
-    content: '';
-    @apply absolute inset-0 rounded-2xl p-[1px];
-    background: linear-gradient(
-      135deg,
-      rgba(249, 115, 22, 0.5),
-      rgba(236, 72, 153, 0.5),
-      rgba(249, 115, 22, 0.5)
-    );
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-
-  /* Shimmer effect */
-  .shimmer {
-    @apply relative overflow-hidden;
-  }
-
-  .shimmer::after {
-    content: '';
-    @apply absolute inset-0;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    );
-    animation: shimmer 2s infinite;
-  }
-
-  /* Pulse ring */
-  .pulse-ring {
-    @apply relative;
-  }
-
-  .pulse-ring::before {
-    content: '';
-    @apply absolute inset-0 rounded-full;
-    animation: pulse-ring 2s ease-out infinite;
-    border: 2px solid currentColor;
+    @apply bg-gradient-to-r from-orange-400 via-orange-500 to-pink-500 bg-clip-text text-transparent;
   }
 
   /* Card hover effect */
@@ -111,12 +56,7 @@
   }
 
   .card-hover:hover {
-    @apply -translate-y-1 shadow-glow;
-  }
-
-  /* Focus ring */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-surface;
+    @apply -translate-y-1;
   }
 
   /* Hide scrollbar */
@@ -127,20 +67,6 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-
-  /* Map container */
-  .map-container {
-    @apply w-full h-full rounded-xl overflow-hidden;
-  }
-
-  .mapboxgl-canvas {
-    @apply focus:outline-none;
-  }
-
-  .mapboxgl-ctrl-logo,
-  .mapboxgl-ctrl-attrib {
-    @apply hidden !important;
   }
 }
 
@@ -157,40 +83,5 @@
   }
   .animation-delay-500 {
     animation-delay: 500ms;
-  }
-
-  /* Text balance */
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-@keyframes gradient-shift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@keyframes pulse-ring {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
   }
 }

@@ -20,7 +20,7 @@ const variantStyles = {
   subtle:
     'bg-white/[0.02] backdrop-blur-lg border border-white/5',
   solid:
-    'bg-surface-elevated border border-white/10',
+    'bg-gray-900 border border-white/10',
 }
 
 const paddingStyles = {
